@@ -9,8 +9,8 @@ for csv_path in path.glob('**/*.csv'):
     temp_df = pd.read_csv(csv_path)
 
     # извлекаем дату и имя если нужно
-    date = path.parts[-3]
-    name = path.parts[-2]
+    date = csv_path.parts[-3]
+    name = csv_path.parts[-2]
 
     # Добавляем колонки
     temp_df['date'] = date
